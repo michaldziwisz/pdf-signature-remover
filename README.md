@@ -24,6 +24,9 @@ komunikaty o postępie.
 2. Kliknij „Usuń podpisy ze wszystkich”.
 3. Gotowe pliki znajdziesz obok oryginałów z dopiskiem `_bez_podpisow`.
 
+Możesz też przeciągnąć pliki PDF na ikonę programu lub użyć „Otwórz za
+pomocą” w Eksploratorze Windows — zostaną od razu wczytane na listę.
+
 Uwaga: po usunięciu podpisu dokument przestaje być podpisany — czytniki PDF
 nie pokażą już informacji „podpisano przez…”. Jest to działanie zamierzone.
 
