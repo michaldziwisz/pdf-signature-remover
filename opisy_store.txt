@@ -1,0 +1,90 @@
+========================================================================
+OPISY DO MICROSOFT STORE / PARTNER CENTER — PDF Signature Remover
+========================================================================
+Zasada: BEZ nazw firm/platform podpisów. Ogólnie "wszystkie podpisy cyfrowe".
+Nazwa produktu (stała, angielska): PDF Signature Remover
+
+
+========================================================================
+WERSJA POLSKA (pl-PL)
+========================================================================
+
+--- Krótki opis (short description, limit ~200 znaków) ---
+Prosty, w pełni dostępny program do usuwania wszystkich podpisów cyfrowych z plików PDF. Zachowuje całą treść i wszystkie strony dokumentu. Obsługuje pojedyncze pliki i całe foldery.
+
+
+--- Opis pełny (description) ---
+PDF Signature Remover to proste i w pełni dostępne narzędzie, które usuwa wszystkie podpisy cyfrowe z plików PDF, zamieniając podpisany dokument w zwykły, niepodpisany plik PDF.
+
+Program usuwa wyłącznie podpisy — cała treść dokumentu i wszystkie strony pozostają nietknięte. Nie dodaje ani nie kasuje żadnych stron.
+
+Główne funkcje:
+• Usuwa wszystkie podpisy cyfrowe z pliku PDF za jednym kliknięciem.
+• Zachowuje pełną treść dokumentu i wszystkie strony bez zmian.
+• Obsługuje wiele plików naraz — możesz dodać pojedyncze pliki lub cały folder.
+• Dla każdego pliku tworzy nowy plik obok oryginału (z dopiskiem „_bez_podpisow”). Oryginał zostaje nienaruszony.
+• Automatycznie pomija pliki, które nie mają podpisów.
+• Pełna dostępność dla czytników ekranu (NVDA, JAWS) — natywne kontrolki, obsługa z klawiatury, czytelna lista plików i komunikaty o postępie.
+• Interfejs dwujęzyczny: automatycznie polski na polskim systemie Windows, angielski na pozostałych.
+
+Jak używać:
+1. Dodaj pliki PDF (pojedynczo lub cały folder).
+2. Kliknij „Usuń podpisy ze wszystkich”.
+3. Gotowe pliki znajdziesz obok oryginałów z dopiskiem „_bez_podpisow”.
+
+Uwaga: po usunięciu podpisu dokument przestaje być podpisany — czytniki PDF nie będą już pokazywać informacji „podpisano przez…”. Jest to działanie zamierzone.
+
+
+--- Słowa kluczowe / cechy wyszukiwania ---
+PDF, podpis cyfrowy, usuwanie podpisu, dostępność, NVDA, JAWS, niewidomi
+
+
+========================================================================
+WERSJA ANGIELSKA (en-US)
+========================================================================
+
+--- Short description (limit ~200 chars) ---
+A simple, fully accessible tool that removes all digital signatures from PDF files. Keeps the entire document content and all pages. Works with single files or whole folders.
+
+
+--- Description ---
+PDF Signature Remover is a simple, fully accessible tool that removes all digital signatures from PDF files, turning a signed document into a regular, unsigned PDF.
+
+It removes signatures only — the full document content and all pages stay untouched. No pages are added or deleted.
+
+Key features:
+• Removes all digital signatures from a PDF with a single click.
+• Keeps the entire document content and all pages unchanged.
+• Batch processing — add individual files or an entire folder at once.
+• Creates a new file next to each original (with the "_no_signatures" suffix). The original stays intact.
+• Automatically skips files that have no signatures.
+• Full screen reader support (NVDA, JAWS) — native controls, keyboard operation, a clear file list and progress messages.
+• Bilingual interface: automatically Polish on a Polish Windows system, English elsewhere.
+
+How to use:
+1. Add PDF files (individually or a whole folder).
+2. Click "Remove signatures from all".
+3. The finished files appear next to the originals with the "_no_signatures" suffix.
+
+Note: once a signature is removed, the document is no longer signed — PDF readers will no longer show "signed by…". This is intended behavior.
+
+
+--- Keywords / search terms ---
+PDF, digital signature, remove signature, accessibility, NVDA, JAWS, blind
+
+
+========================================================================
+DANE PRODUKTU (do Partner Center)
+========================================================================
+Nazwa wyświetlana (product name): PDF Signature Remover
+Publisher display name: Michał Dziwisz
+Kategoria sugerowana: Productivity / Narzędzia (Utilities & tools)
+Wiek: dla wszystkich (3+)
+Prywatność: aplikacja działa w pełni lokalnie, nie wysyła żadnych danych,
+  nie wymaga internetu ani konta. (Brak zbierania danych — istotne przy
+  wypełnianiu deklaracji prywatności w Partner Center.)
+
+URL polityki prywatności (działa, publiczny):
+  https://michaldziwisz.github.io/pdf-signature-remover/strona_prywatnosci/
+Repozytorium kodu:
+  https://github.com/michaldziwisz/pdf-signature-remover

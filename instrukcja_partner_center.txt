@@ -1,0 +1,102 @@
+========================================================================
+PARTNER CENTER — rezerwacja produktu i odczyt tożsamości
+Instrukcja krok po kroku (dostępna, pod czytnik ekranu)
+Aplikacja: PDF Signature Remover
+========================================================================
+
+Cel: zarezerwować nazwę aplikacji w Partner Center, odczytać i ZAPISAĆ
+wartości tożsamości pakietu (Identity Name, Publisher, PublisherDisplayName,
+Store Product ID). Bez nich nie da się zbudować finalnego pakietu do wysyłki.
+
+WAŻNE (Twoje konto już to ma — do potwierdzenia): z poprzednich aplikacji
+znamy dwie wartości PER-KONTO, które są takie same dla każdej Twojej appki:
+  Publisher            = CN=1066245B-0EAF-4A43-9A3E-A1AF4E57687B
+  PublisherDisplayName = Michał Dziwisz
+Zmienia się tylko Identity Name (per aplikacja) i Store Product ID.
+
+
+------------------------------------------------------------------------
+PRZYGOTUJ MIEJSCE NA ZAPIS
+------------------------------------------------------------------------
+Otwórz sobie pusty plik tekstowy (Notatnik) — będziesz tam wklejać
+4 wartości. Podpisz je zawczasu, po jednej w linii:
+  Store Product ID:
+  Identity Name (Package/Identity/Name):
+  Publisher (CN=...):
+  PublisherDisplayName:
+
+
+------------------------------------------------------------------------
+KROK 1. Zaloguj się i utwórz nową aplikację
+------------------------------------------------------------------------
+1. Wejdź na https://partner.microsoft.com/dashboard i zaloguj się.
+2. Przejdź do sekcji aplikacji (Apps and games / Aplikacje i gry).
+   - Na stronie jest lista Twoich aplikacji jako nagłówki/linki.
+     Nawiguj klawiszem H (nagłówki) albo Tab, aż usłyszysz przycisk
+     tworzenia nowej: "New product" / "Create a new app" /
+     "Utwórz nową aplikację". Aktywuj Enter.
+3. Wybierz typ produktu: "App" (aplikacja). Enter.
+
+
+------------------------------------------------------------------------
+KROK 2. Zarezerwuj nazwę
+------------------------------------------------------------------------
+1. Pojawi się pole edycji na nazwę produktu (label zwykle "Reserve
+   product name" / "Zarezerwuj nazwę produktu").
+2. Wpisz dokładnie:  PDF Signature Remover
+3. Aktywuj przycisk "Check availability" / "Sprawdź dostępność"
+   (Tab do niego, Enter). Czytnik odczyta czy nazwa jest wolna.
+4. Aktywuj "Reserve product name" / "Zarezerwuj" (Enter).
+   Jeśli dokładna nazwa jest zajęta, Partner Center zaproponuje warianty
+   — daj mi wtedy znać, ustalimy nazwę zastępczą (i poprawię manifest).
+
+
+------------------------------------------------------------------------
+KROK 3. Odczytaj tożsamość pakietu (NAJWAŻNIEJSZE)
+------------------------------------------------------------------------
+Po rezerwacji jesteś na stronie przeglądu produktu (Overview).
+
+1. Znajdź w menu bocznym / drzewie nawigacji pozycję:
+   "Product management" (Zarządzanie produktem) -> w niej
+   "Product identity" (Tożsamość produktu).
+   - Nawiguj listą linków (w NVDA: klawisz K = następny link, albo Tab).
+     Szukaj słów "Product identity".
+2. Na stronie "Product identity" są 3-4 wartości. Każda jest zwykle
+   w osobnym polu tylko-do-odczytu, często z przyciskiem "Copy" obok.
+   Odczytaj i skopiuj każdą:
+
+   a) Package/Identity/Name  (to jest Identity Name)
+      - przykład formatu: coś w rodzaju "12345MichaDziwisz.PDFSignatureRemover"
+        albo losowy prefiks — WAŻNE: skopiuj DOKŁADNIE, w całości.
+   b) Package/Identity/Publisher  (zacznie się od "CN=...")
+      - powinno być CN=1066245B-0EAF-4A43-9A3E-A1AF4E57687B
+   c) Package/Properties/PublisherDisplayName
+      - powinno być: Michał Dziwisz
+   d) Store ID / Product ID (czasem na stronie Overview, nie tu)
+      - ciąg typu 9NBLGGH... — zapisz też.
+
+   JAK SKOPIOWAĆ dokładnie (czytnik):
+   - Jeśli jest przycisk "Copy" obok wartości: Tab do niego, Enter —
+     wartość ląduje w schowku, wklej ją (Ctrl+V) do Notatnika.
+   - Jeśli nie ma przycisku Copy: wejdź w pole (Tab), w NVDA włącz
+     tryb formularza, zaznacz całość Ctrl+A, skopiuj Ctrl+C, wklej.
+   - Sprawdź po wklejeniu, że wartość nie jest ucięta.
+
+
+------------------------------------------------------------------------
+KROK 4. Przekaż mi wartości
+------------------------------------------------------------------------
+Wklej mi w czacie zawartość Notatnika (te 4 wartości). Ja wtedy:
+  - wstawię prawdziwy Identity Name do AppxManifest.xml,
+  - przepakuję finalny MSIX,
+  - i dostaniesz gotowy plik do wgrania w Partner Center.
+
+Uwaga: reszta listingu (opis, screenshoty, kategoria, wiek, prywatność,
+rynki, cena=bezpłatna) — mam już przygotowane teksty (opisy_store.txt) i
+zrzuty (zrzuty_store/store_1366x768/). Do tego przejdziemy po zbudowaniu
+finalnego pakietu.
+
+NOTATKA O PRYWATNOŚCI: aplikacja działa w pełni lokalnie, nie zbiera
+żadnych danych, nie łączy się z internetem. Partner Center i tak zwykle
+wymaga URL polityki prywatności — jeśli go nie masz, ustalimy najprostszą
+opcję (np. krótka strona na GitHub Pages), tak jak przy TyfloCentrum.

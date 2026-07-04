@@ -1,0 +1,39 @@
+# --- Sekrety (NIGDY do repo) ---
+*.pfx
+msix_test_cert.pfx
+*.env
+.env
+
+# --- Artefakty buildu (ciezkie, generowane) ---
+build/
+dist/
+dist_msix/
+__pycache__/
+*.pyc
+PDFSignatureRemover.msix
+*.msix
+msix_pkg/PDFSignatureRemover/
+msix_pkg/resources.pri
+
+# --- Logi ---
+*.log
+
+# --- Pliki tymczasowe/robocze tej sesji ---
+diag*.ps1
+zrzut.ps1
+zrzut2.ps1
+zrzut3.ps1
+find_aumid.ps1
+naprawa_faza1.ps1
+_tmp*.png
+
+# --- Duplikaty spec (zostaje tylko PDFSignatureRemover.spec) ---
+Usuwanie Podpisow PDF.spec
+UsuwaniePodpisowPDF.spec
+PDF Signature Remover.spec
+
+# --- Prywatne dokumenty testowe (NIGDY do repo) ---
+*.pdf
+
+# --- Certyfikat testowy (publiczny, ale niepotrzebny w repo) ---
+*.cer
