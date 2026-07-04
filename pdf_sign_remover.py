@@ -11,6 +11,7 @@ angielski na każdym innym. Zbudowany w wxPython (natywne kontrolki Win32
 """
 
 import os
+import sys
 import threading
 
 import wx
@@ -367,6 +368,19 @@ class Ramka(wx.Frame):
         self.Centre()
         self.btn_dodaj_pliki.SetFocus()
 
+    def wczytaj_poczatkowe(self, sciezki):
+        """Wczytuje pliki PDF podane jako argumenty wiersza poleceń
+        (np. przy 'Otwórz za pomocą' w Eksploratorze Windows)."""
+        dodane = 0
+        for s in sciezki:
+            if os.path.isfile(s) and s.lower().endswith(".pdf"):
+                if self.dodaj_do_listy(s):
+                    dodane += 1
+        if dodane:
+            self.aktualizuj_przycisk()
+            self.dopisz(tr("added_files", n=dodane))
+            self.SetStatusText(tr("on_list", n=len(self.pliki)))
+
     def dopisz(self, tekst):
         self.log.AppendText(tekst + "\n")
 
@@ -511,17 +525,28 @@ class Ramka(wx.Frame):
         podsumowanie = tr("summary", ok=ok, sk=sk, er=er)
         self.dopisz(podsumowanie)
         self.SetStatusText(podsumowanie)
-        wx.MessageBox(
-            podsumowanie + tr("done_extra"), tr("done_title"),
-            wx.OK | wx.ICON_INFORMATION, self,
-        )
+        if not getattr(self, "_tryb_auto", False):
+            wx.MessageBox(
+                podsumowanie + tr("done_extra"), tr("done_title"),
+                wx.OK | wx.ICON_INFORMATION, self,
+            )
         self.btn_dodaj_pliki.SetFocus()
 
 
 def main():
+    args = sys.argv[1:]
+    auto = "--auto" in args
+    pliki_arg = [a for a in args if a != "--auto"]
     app = wx.App(False)
     ramka = Ramka()
     ramka.Show()
+    # Pliki podane jako argumenty (np. "Otwórz za pomocą" w Eksploratorze)
+    if pliki_arg:
+        ramka.wczytaj_poczatkowe(pliki_arg)
+        # Tryb automatyczny: od razu uruchom usuwanie (do zrzutów/testów)
+        if auto:
+            ramka._tryb_auto = True
+            wx.CallLater(800, ramka.na_usun, None)
     app.MainLoop()
 
 

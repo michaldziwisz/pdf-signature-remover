@@ -37,3 +37,8 @@ PDF Signature Remover.spec
 
 # --- Certyfikat testowy (publiczny, ale niepotrzebny w repo) ---
 *.cer
+zrzut_neutralny.ps1
+zrzut_neutralny2.ps1
+zrzut_arg.ps1
+zrzut3_arg.ps1
+zrzut3_auto.ps1
